@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rahim Football TCHAD 🇹🇩 | Football tchadien</title>
+
+  <meta name="description"
+        content="Rahim Football TCHAD : actualités, résultats, clubs, joueurs, compétitions et culture du football tchadien.">
+  <meta name="keywords"
+        content="Rahim Football TCHAD, football Tchad, football tchadien, N'Djamena, clubs tchadiens, joueurs tchadiens">
+  <meta name="author" content="Rahim Football TCHAD">
+
+  <!-- Facebook / partage -->
+  <meta property="og:title" content="Rahim Football TCHAD 🇹🇩">
+  <meta property="og:description"
+        content="Toute l'actualité et la passion du football tchadien.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0757a8;
+      color: white;
+      box-shadow: 0 3px 15px rgba(0,0,0,.18);
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 560px;
+      padding: 90px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,45,100,.80), rgba(0,80,160,.80)),
+        radial-gradient(circle at center, #1683ff, #003b75);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 9vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: clamp(17px, 3vw, 23px);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      margin: 5px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      background: white;
+      color: #0757a8;
+    }
+
+    .btn-green {
+      background: #20c66b;
+      color: white;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1150px;
+      margin: 55px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      color: #0757a8;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(20,40,70,.08);
+      border: 1px solid #e8edf5;
+    }
+
+    .card-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #0757a8;
+      margin-bottom: 10px;
+    }
+
+    /* ACTUALITES */
+    .news {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .news-top {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      background: linear-gradient(135deg,#dcecff,#eef6ff);
+    }
+
+    .news-content {
+      padding: 20px;
+    }
+
+    .news-content h3 {
+      color: #0757a8;
+      margin-bottom: 8px;
+    }
+
+    /* STATS */
+    .stats {
+      background: #0757a8;
+      color: white;
+      border-radius: 22px;
+      padding: 35px 20px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 38px;
+      font-weight: 800;
+    }
+
+    /* COMMUNITY */
+    .community {
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 5px 20px rgba(20,40,70,.08);
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: #eaf3ff;
+      padding: 45px 20px;
+      border-radius: 22px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      text-align: center;
+      background: #101827;
+      color: white;
+    }
+
+    footer a {
+      color: #63b5ff;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 60px 18px;
+      }
+
+      section {
+        margin: 40px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <nav>
+
+    <div class="logo">
+      ⚽ Rahim Football TCHAD 🇹🇩
+    </div>
+
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#actualites">Actualités</a></li>
+      <li><a href="#football">Football</a></li>
+      <li><a href="#communaute">Communauté</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- ================= ACCUEIL ================= -->
+
+<main>
+
+<section class="hero" id="accueil">
+
+  <div class="hero-content">
+
+    <h1>
+      Rahim Football TCHAD 🇹🇩
+    </h1>
+
+    <p>
+      La passion du football tchadien au cœur du numérique.
+      Actualités, compétitions, clubs, joueurs et communauté.
+    </p>
+
+    <a href="#actualites" class="btn btn-white">
+      📰 Découvrir les actualités
+    </a>
+
+    <a href="https://wa.me/23562496176"
+       class="btn btn-green"
+       target="_blank">
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ACTUALITES ================= -->
+
+<section id="actualites">
+
+  <div class="section-title">
+    <h2>📰 Actualités</h2>
+    <p>
+      L'espace destiné aux futures actualités du football tchadien.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card news">
+
+      <div class="news-top">
+        ⚽
+      </div>
+
+      <div class="news-content">
+
+        <h3>
+          Actualités du football tchadien
+        </h3>
+
+        <p>
+          Cette section pourra accueillir les informations,
+          analyses, annonces et événements du football au Tchad.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="card news">
+
+      <div class="news-top">
+        🏆
+      </div>
+
+      <div class="news-content">
+
+        <h3>
+          Compétitions
+        </h3>
+
+        <p>
+          Retrouvez progressivement les compétitions,
+          résultats et informations importantes.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="card news">
+
+      <div class="news-top">
+        🇹🇩
+      </div>
+
+      <div class="news-content">
+
+        <h3>
+          Football au Tchad
+        </h3>
+
+        <p>
+          Une plateforme dédiée à la promotion et à la visibilité
+          du football tchadien.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTBALL ================= -->
+
+<section id="football">
+
+  <div class="section-title">
+
+    <h2>⚽ Football</h2>
+
+    <p>
+      Les différentes catégories du projet.
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+    <div class="card">
+
+      <div class="card-icon">
+        🏟️
+      </div>
+
+      <h3>Clubs</h3>
+
+      <p>
+        Espace destiné à présenter les clubs de football
+        et leurs informations.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">
+        👤
+      </div>
+
+      <h3>Joueurs</h3>
+
+      <p>
+        Présentation des joueurs et talents du football
+        tchadien.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">
+        🏆
+      </div>
+
+      <h3>Compétitions</h3>
+
+      <p>
+        Une future section pour suivre les compétitions
+        et résultats.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">
+        📸
+      </div>
+
+      <h3>Galerie</h3>
+
+      <p>
+        Photos, vidéos et moments forts du football
+        tchadien.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= STATISTIQUES ================= -->
+
+<section>
+
+  <div class="stats">
+
+    <div class="stats-grid">
+
+      <div>
+        <span class="stat-number">🇹🇩</span>
+        <span>Tchad</span>
+      </div>
+
+      <div>
+        <span class="stat-number">⚽</span>
+        <span>Football</span>
+      </div>
+
+      <div>
+        <span class="stat-number">📱</span>
+        <span>Numérique</span>
+      </div>
+
+      <div>
+        <span class="stat-number">🚀</span>
+        <span>Innovation</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= COMMUNAUTE ================= -->
+
+<section id="communaute">
+
+  <div class="community">
+
+    <div class="section-title">
+
+      <h2>🤝 Notre communauté</h2>
+
+      <p>
+        Rejoignez l'espace Rahim Football TCHAD
+        et participez au développement du football tchadien.
+      </p>
+
+    </div>
+
+    <a
+      href="https://www.facebook.com/abdourrahim.hassan"
+      target="_blank"
+      class="btn btn-white"
+      style="border:1px solid #0757a8;">
+      📘 Facebook
+    </a>
+
+    <a
+      href="https://wa.me/23562496176"
+      target="_blank"
+      class="btn btn-green">
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>
+      📞 Contact
+    </h2>
+
+    <br>
+
+    <p>
+      Pour les collaborations, publicités, partenariats
+      ou informations :
+    </p>
+
+    <br>
+
+    <a
+      href="https://wa.me/23562496176"
+      target="_blank"
+      class="btn btn-green">
+      Contacter Rahim Football TCHAD
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <h3>
+    ⚽ Rahim Football TCHAD 🇹🇩
+  </h3>
+
+  <br>
+
+  <p>
+    Football • Tchad • Numérique • Communauté
+  </p>
+
+  <br>
+
+  <p>
+    © 2026 Rahim Football TCHAD
+  </p>
+
+  <br>
+
+  <p>
+    <a href="https://www.facebook.com/abdourrahim.hassan"
+       target="_blank">
+      Facebook
+    </a>
+    &nbsp; | &nbsp;
+    <a href="https://wa.me/23562496176"
+       target="_blank">
+      WhatsApp
+    </a>
+  </p>
+
+</footer>
+
+</body>
+</html>
